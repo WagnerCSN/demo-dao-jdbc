@@ -40,6 +40,16 @@ public class Program {
 			System.out.println(obj);
 		}
 		
+		System.out.println("\nSeller update: ");
+		seller = sellerDao.findById(1);
+		seller.setName("Marta");
+		sellerDao.update(seller);
+		
+		list = sellerDao.findAll();
+		for(Seller obj : list) {
+			System.out.println(obj);
+		}
+		
 	}
 
 }
