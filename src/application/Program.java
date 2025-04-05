@@ -50,6 +50,13 @@ public class Program {
 			System.out.println(obj);
 		}
 		
+		System.out.println("\nSeller delete: ");
+		sellerDao.deleteById(10);
+		
+		list = sellerDao.findAll();
+		for(Seller obj : list) {
+			System.out.println(obj);
+		}
 	}
 
 }
